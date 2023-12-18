@@ -22,7 +22,7 @@ body{
     display: grid;
     grid-template-areas: 'header' 'main' 'footer';
     grid-template-columns: 1fr;
-    grid-template-rows: 0.5fr 3fr 1fr;
+    grid-template-rows: 0.5fr 3fr 0.6fr;
     height: 100%;
 }
 
@@ -98,8 +98,8 @@ main{
 .input-area{
     display: flex;
     flex-direction: column;
+    flex: 1 1 60%;
     padding: 0.5rem;
-    width: 50%;
     border-right: 0.3rem rgb(166, 172, 180) solid;
 }
 
@@ -141,7 +141,7 @@ main{
     display: flex;
     flex-direction: column;
     padding: 0.5rem;
-    width: 50%;
+    flex: 0 1 40%;
 }
 
 .translation-area-header{
@@ -177,4 +177,38 @@ footer{
     grid-area: footer;
     display: flex;
     flex-wrap: wrap;
-   
+    flex-direction: column;
+    row-gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgb(30, 136, 95);
+    color: white;
+}
+
+footer ul{
+    list-style-type: none;
+}
+
+footer .footer-header{
+    display: flex;
+    justify-content: center;
+    width: 75%;
+    font-size: 2.5rem;
+}
+
+footer .footer-links{
+    width: 75%;
+    font-size: 2.5rem;
+}
+
+footer .footer-links ul{
+    display: flex;
+    flex-direction: row;
+    column-gap: 2rem;
+    justify-content: center;
+}
+
+.footer-links ul li{
+    cursor: pointer;
+}
