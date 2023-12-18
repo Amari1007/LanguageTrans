@@ -1,0 +1,180 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-size: 62%; /*10px=1rem*/
+}
+
+body{
+    height: 100vh;
+    font-size: 1.6rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.yellow-font{
+    color: yellow;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-areas: 'header' 'main' 'footer';
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 3fr 1fr;
+    height: 100%;
+}
+
+header{
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    font-size: 1.8rem;
+    font-family: 'Tahoma';
+    color: black;
+    border-bottom: 0.25rem solid rgb(19, 117, 79);
+    border-radius: 0.4rem;
+    /* border: 1px solid black; */
+}
+
+.brand{
+    width: 30%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    color: rgb(19, 117, 79);
+    font-family: 'Consols','Helvetica';
+    font-size: 2.3rem;
+    font-weight: bold;
+    /* border: 1px solid black; */
+}
+
+.options{
+    list-style-type: none;
+    display: flex;
+    width: 70%;
+    flex-direction: row;
+    column-gap:4rem;
+    align-items:center;
+    justify-content:end;
+    /* border: 1px solid black; */
+}
+
+.options button:hover{
+    font-size: 3.3rem;
+}
+
+.options button{
+    font-size: 2.8rem;
+    border: none;
+    outline: none;
+    background:none;
+}
+
+.login-button:hover{
+    cursor: pointer;
+    font-size: 2.1rem;
+}
+
+main{
+    grid-area: main;
+    padding-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 70%;
+}
+
+.input-area{
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    width: 50%;
+    border-right: 0.3rem rgb(166, 172, 180) solid;
+}
+
+.input-area-header{
+    display: flex;
+    justify-content:space-around;
+    align-items: end;
+    font-size: 1.7rem;
+    width: 100%;
+    height: 10%;
+}
+
+.translate-btn{
+    height: 100%;
+    background-color: rgb(67, 147, 212);
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+    font-family: 'Helvetica';
+    color: white;
+    cursor: pointer;
+}
+
+.translate-btn:hover{
+    background-color: rgb(48, 114, 168);
+}
+
+.input-area h4, .translation-area h4{
+    color: rgb(19, 117, 79);
+}
+
+.input-area-text{
+    height: 90%;
+    padding-top: 1rem;
+}
+
+.translation-area{
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    width: 50%;
+}
+
+.translation-area-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    height: 10%;
+    font-size: 1.7rem;
+}
+
+.translation-area-text{
+    height: 90%;
+    padding-top: 1rem;
+}
+
+.copy-text-btn{
+    height: 100%;
+    background-color:white;
+    border: none;
+    outline: none;
+    padding-top: 2rem;
+    font-weight: bold;
+    font-family: 'Helvetica';
+    color: rgb(67, 147, 212);
+    cursor: pointer;
+}
+
+.copy-text-btn:hover{
+    font-size: 1.4rem;
+}
+
+footer{
+    grid-area: footer;
+    display: flex;
+    flex-wrap: wrap;
+   

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--FONT AWESOME LINKS-->
+        <link rel="stylesheet" href="css/fontawesome-free-6.5.1-web/css/all.min.css">
+    <!---->
+    <link href="css/main.css" rel="stylesheet">
+    <link rel="icon" href="res/icons/language.png">
+    <title>LangTran</title>
+</head>
+<body>
+    <div class="grid-container">
+        <header>
+            <nav>
+                <ul class="brand">
+                    <li>
+                        <img src="res/icons/language.png" width="23" alt="brand-logo">
+                        <span>LangTran</span>
+                    </li>
+                </ul>
+
+                <ul class="options">
+                    <li>
+                        <button type="button" class="options-btn" title="Light Mode">
+                            <i class="fa-solid fa-moon"></i>
+                        </button>
+                    </li>
+                    <li class="login-button">
+                        <span>Login</span>
+                        <i class="fa-solid fa-user"></i>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+
+            <!-- <button type="button" class="translate-btn" title="Translate Text">Translate
+                <i class="fa fa-arrows-h"></i>
+            </button> -->
+            
+            <div class="input-area">
+                <div class="input-area-header">
+                    <h4>Type Text</h4>
+                    <span>Target Language:</span>
+                    <select name="selected-language" title="Select Language" class="selected-language">
+                        <option value="spanish">Spanish</option>
+                        <option value="french">French</option>
+                        <option value="german">German</option>
+                        <option value="portuguese">Portuguese</option>
+                    </select>                    
+                </div>
+                <div class="input-area-text" contenteditable="true">
+                    
+                </div>
+            </div>
+
+            <div class="translation-area">
+                <div class="translation-area-header">
+                    <h4>Translation</h4>
+                    <button type="button" class="copy-text-btn" title="Copy to clipboard">Copy Text <i class="fa fa-clone"></i> </button>
+                </div>                
+                <div class="translation-area-text" contenteditable="false">
+
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div>
+                <h2>
+                    <code>Footer @2023</code>
+                </h2>
+            </div>
+        </footer>
+
+    </div>
+</body>
+<script src="./main.js"></script>
+</html>
