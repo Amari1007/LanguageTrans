@@ -1,8 +1,16 @@
 const languageList = {
-    spanish: "es",
-    french: "fr",
-    german: "de",
-    portuguese: "pt",
+    Spanish: "es",
+    French: "fr",
+    German: "de",
+    Portuguese: "pt",
+    Chinese: "zh",
+    Zulu: "zu",
+    Hebrew:	"he",
+    Chichewa: "ny",
+    Japanese: "ja",
+    Korean: "ko",
+    Dutch: "nul",
+    Russian:"ru",
 }
 
 export default languageList;
