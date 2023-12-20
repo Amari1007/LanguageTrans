@@ -1,14 +1,15 @@
 import axios from "axios";
 import languageList from "./languageList";
 
-const translateBtn = document.getElementsByClassName("translate-btn")[0];
-const inputText = document.getElementsByClassName("input-area-text")[0];
-const translationTextBox = document.getElementsByClassName("translation-area-text")[0];
-
 window.addEventListener("DOMContentLoaded", () => {
+    const translateBtn = document.getElementsByClassName("translate-btn")[0];
+    const inputText = document.getElementsByClassName("input-area-text")[0];
+    const translationTextBox = document.getElementsByClassName("translation-area-text")[0];
+    const copyTextBtn = document.getElementsByClassName("copy-text-btn")[0];
+    
     translateBtn.addEventListener("click", async () => {
         const targetLanguage = document.getElementsByClassName("selected-language")[0].value;
-        const text = inputText.innerHTML.toString();
+        const text = inputText.innerHTML.toString().trim();
 
         if(text.length > 0){
             try {
@@ -32,7 +33,16 @@ window.addEventListener("DOMContentLoaded", () => {
             }
 
         }
+    });
 
+    copyTextBtn.addEventListener("click", async () => {
+        const text = translationTextBox.innerHTML.toString().trim();
+        try {
+            const response = await navigator.clipboard.writeText(text)   
+            alert("Copied text to clipboard!");
+        } catch (error) {
+            alert("Failed to copy text!");
+        }
     });
 
 });

@@ -12,6 +12,7 @@ body{
     height: 100vh;
     font-size: 1.6rem;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    scroll-behavior: smooth;
 }
 
 .yellow-font{
@@ -96,16 +97,18 @@ main{
 }
 
 .input-area{
+    /* border: 1px solid black; */
     display: flex;
     flex-direction: column;
-    flex: 1 1 60%;
     padding: 0.5rem;
-    border-right: 0.3rem rgb(166, 172, 180) solid;
+    flex: 1 1 50%;
+    /* border-right: 0.3rem rgb(166, 172, 180) solid; */
 }
 
 .input-area-header{
     display: flex;
-    justify-content:space-around;
+    /* justify-content:space-between; */
+    column-gap: 2rem;
     align-items: end;
     font-size: 1.7rem;
     width: 100%;
@@ -113,11 +116,10 @@ main{
 }
 
 .translate-btn{
-    height: 100%;
     background-color: rgb(67, 147, 212);
     border: none;
     outline: none;
-    padding: 0.5rem;
+    padding: 0.8rem;
     border-radius: 0.4rem;
     font-family: 'Helvetica';
     color: white;
@@ -133,23 +135,38 @@ main{
 }
 
 .input-area-text{
+    margin-top: 1rem;
     height: 90%;
-    padding-top: 1rem;
+    width: 45rem;
+    border: none;
+    outline: none;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.input-area-text:focus{
+    border: 0.1rem lightslategray solid;
+    border-radius: 0.5rem;
 }
 
 .translation-area{
     display: flex;
     flex-direction: column;
     padding: 0.5rem;
-    flex: 0 1 40%;
+    flex: 1 1 50%;
+    /* border: 1px solid black; */
 }
 
 .translation-area-header{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: end;
     height: 10%;
-    font-size: 1.7rem;
+    font-size: 1.8rem;
+}
+
+.selected-language{
+    width: 8rem;
 }
 
 .translation-area-text{
@@ -158,11 +175,9 @@ main{
 }
 
 .copy-text-btn{
-    height: 100%;
     background-color:white;
     border: none;
     outline: none;
-    padding-top: 2rem;
     font-weight: bold;
     font-family: 'Helvetica';
     color: rgb(67, 147, 212);

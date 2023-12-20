@@ -35,40 +35,40 @@
             </nav>
         </header>
         
-        <main>
-            <!-- <button type="button" class="translate-btn" title="Translate Text">Translate
-                <i class="fa fa-arrows-h"></i>
-            </button> -->
-            
+        <main>            
             <div class="input-area">
                 <div class="input-area-header">
                     <h4>Type Text</h4>
-                    <span>Target Language:</span>
-                    <select name="selected-language" title="Select Language" class="selected-language">
-                        <option value="Spanish">Spanish</option>
-                        <option value="French">French</option>
-                        <option value="German">German</option>
-                        <option value="Portuguese">Portuguese</option>
-                        <option value="Chinese">Chinese (Simplified)</option>
-                        <option value="Zulu">Zulu</option>
-                        <option value="Hebrew">Hebrew</option>
-                        <option value="Chichewa">Chichewa</option>
-                        <option value="Japanese">Japanese</option>
-                        <option value="Korean">Korean</option>
-                        <option value="Dutch">Dutch</option>
-                        <option value="Russian">Russian</option>
-                    </select>                    
+                    <div>
+                        <span>Target Language:</span>
+                        <select name="selected-language" title="Select Language" class="selected-language">
+                            <option value="Spanish">Spanish</option>
+                            <option value="French">French</option>
+                            <option value="German">German</option>
+                            <option value="Portuguese">Portuguese</option>
+                            <option value="Chinese">Chinese (Simplified)</option>
+                            <option value="Zulu">Zulu</option>
+                            <option value="Hebrew">Hebrew</option>
+                            <option value="Chichewa">Chichewa</option>
+                            <option value="Japanese">Japanese</option>
+                            <option value="Korean">Korean</option>
+                            <option value="Dutch">Dutch</option>
+                            <option value="Russian">Russian</option>
+                        </select>
+                    </div>
+                    <button type="button" class="translate-btn" title="Translate Text">Translate
+                        <i class="fa fa-arrows-h"></i>
+                    </button>
                 </div>
-                <div class="input-area-text" contenteditable="true">
+                <div class="input-area-text" contenteditable="true" spellcheck="false">
                     
                 </div>
             </div>
-
             <div class="translation-area">
                 <div class="translation-area-header">
                     <h4>Translation</h4>
                     <button type="button" class="copy-text-btn" title="Copy to clipboard">Copy Text <i class="fa fa-clone"></i> </button>
-                </div>                
+                </div>
                 <div class="translation-area-text" contenteditable="false">
 
                 </div>
@@ -86,9 +86,7 @@
             </div>
             <div class="footer-links">
                 <ul>
-                    <li title="Click to view Github Repository" onclick="()=>{
-                        location.assign.location = 'https://github.com/Amari1007/LanguageTrans'
-                    }">
+                    <li title="Click to view Github Repository">
                         <i class="fa fa-github"></i>
                     </li>
                     <li>
