@@ -6,6 +6,8 @@ window.addEventListener("DOMContentLoaded", () => {
     const inputText = document.getElementsByClassName("input-area-text")[0];
     const translationTextBox = document.getElementsByClassName("translation-area-text")[0];
     const copyTextBtn = document.getElementsByClassName("copy-text-btn")[0];
+    const pasteTextBtn = document.getElementsByClassName("paste-text-btn")[0];
+    const clearTextBtn = document.getElementsByClassName("clear-text-btn")[0];
     
     translateBtn.addEventListener("click", async () => {
         const targetLanguage = document.getElementsByClassName("selected-language")[0].value;
@@ -32,6 +34,8 @@ window.addEventListener("DOMContentLoaded", () => {
                 console.error(error);
             }
 
+        }else{
+            alert("Cant translate nothing!");
         }
     });
 
@@ -39,10 +43,28 @@ window.addEventListener("DOMContentLoaded", () => {
         const text = translationTextBox.innerHTML.toString().trim();
         try {
             const response = await navigator.clipboard.writeText(text)   
-            alert("Copied text to clipboard!");
+            // alert("Copied text to clipboard!");
         } catch (error) {
             alert("Failed to copy text!");
         }
+    });
+
+    pasteTextBtn.addEventListener("click", async () => {
+        try {
+            const text = await navigator.clipboard.readText();
+            inputText.innerHTML = text.toString().trim();
+            // alert("Copied text to clipboard!");
+        } catch (error) {
+            alert("Failed to copy text!");
+        }
+    });
+
+    clearTextBtn.addEventListener("click", async () => {
+        try{
+            inputText.innerHTML = "";
+        }catch(error){
+            alert("Failed to copy text!");
+        }           
     });
 
 });

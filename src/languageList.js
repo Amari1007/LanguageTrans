@@ -3,6 +3,7 @@ const languageList = {
     French: "fr",
     German: "de",
     Portuguese: "pt",
+    Latin: "la",
     Chinese: "zh",
     Zulu: "zu",
     Hebrew:	"he",
